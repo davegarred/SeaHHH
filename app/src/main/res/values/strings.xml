@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Washington HHH</string>
+    <string name="popup_dialog_close_text">Cool story bro</string>
+
+    <!-- action descriptions -->
+    <string name="action_email_us">Email us</string>
+    <string name="action_help">Questions?</string>
+
+    <!-- Help text -->
+    <string name="help_text">Click on an event to see details\n\nThis is not a difficult concept.\n\nYou should not need help with this.\n\nEmail me with questions/comments/complaints/tit pics.</string>
+
+    <!-- Email us text -->
+    <string name="email_us_subject_line">this app sucks</string>
+    <string name="email_us_chooser_message">Send me an email:</string>
+
+</resources>
