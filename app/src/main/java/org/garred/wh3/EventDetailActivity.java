@@ -53,7 +53,6 @@ public class EventDetailActivity extends Activity {
 		switch (item.getItemId()) {
 			case android.R.id.home:
 				finish();
-//			NavUtils.navigateUpFromSameTask(this);
 				return true;
 			default:
 				return super.onOptionsItemSelected(item);
