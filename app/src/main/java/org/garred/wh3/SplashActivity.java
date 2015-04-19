@@ -4,6 +4,8 @@ import org.garred.wh3.service.CallController;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 public class SplashActivity extends Activity {
 
@@ -16,7 +18,8 @@ public class SplashActivity extends Activity {
             return;
         }
 
-		setContentView(R.layout.splash);		
+		Log.d("SplashActivity", "loading events");
+		setContentView(R.layout.splash);
 		new CallController(this);
 	}
 }

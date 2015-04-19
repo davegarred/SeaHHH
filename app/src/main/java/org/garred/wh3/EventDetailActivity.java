@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,6 +17,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class EventDetailActivity extends Activity {
@@ -36,9 +38,8 @@ public class EventDetailActivity extends Activity {
 		if (event != null) {
 			setContentView(createView());
 		} else {
+			Log.d("EventDetailActivity","returning from Event Detail due to no event");
 			finish();
-//            restart();
-			//NavUtils.navigateUpFromSameTask(this);
 		}
 	}
 

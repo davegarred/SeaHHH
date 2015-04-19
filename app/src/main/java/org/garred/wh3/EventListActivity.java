@@ -7,18 +7,26 @@ import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class EventListActivity extends ListActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		if(ContentHolder.ITEMS.isEmpty()) {
+			finish();
+			Log.d("EventListActivity", "returning from Event List Activity due to no events");
+			return;
+		}
+
 		setContentView(R.layout.activity_event_list);
 		ArrayAdapter<HashEvent> adapter = new EventListAdapter(this, R.layout.event_list_item, R.id.event_list_item_title, ContentHolder.ITEMS);
 		setListAdapter(adapter);
@@ -66,11 +74,11 @@ public class EventListActivity extends ListActivity {
 	}
 
 	private void quitThis() {
-		finish();
-//		Intent intent = new Intent(this, SplashActivity.class);
-//		intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//		intent.putExtra("EXIT", true);
-//		startActivity(intent);
+//		finish();
+		Intent intent = new Intent(this, SplashActivity.class);
+		intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		intent.putExtra("EXIT", true);
+		startActivity(intent);
 	}
 
 	private void emailUs() {
