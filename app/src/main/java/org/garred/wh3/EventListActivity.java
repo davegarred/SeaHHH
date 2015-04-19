@@ -66,10 +66,11 @@ public class EventListActivity extends ListActivity {
 	}
 
 	private void quitThis() {
-		Intent intent = new Intent(this, SplashActivity.class);
-		intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-		intent.putExtra("EXIT", true);
-		startActivity(intent);
+		finish();
+//		Intent intent = new Intent(this, SplashActivity.class);
+//		intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//		intent.putExtra("EXIT", true);
+//		startActivity(intent);
 	}
 
 	private void emailUs() {
