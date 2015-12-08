@@ -65,6 +65,7 @@ public class HashEvent implements Comparable<Object>,Serializable {
 		public boolean hasHare() {
 			return hasHare;
 		}
+
 	}
 
 		

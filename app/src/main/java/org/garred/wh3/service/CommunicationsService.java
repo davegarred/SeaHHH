@@ -22,8 +22,8 @@ public class CommunicationsService implements ThreadCallback {
 	}
 
 	public void downloadEventList(String androidId, int versionCode) {
-		get = new MasterGet(this, "http://nullgeodesic.com/seahhh/v1?dev=" + androidId + "&vers=" + versionCode, "");
-//		get = new MasterGet(this, "http://192.168.1.189:8080/seahhh/v1?dev=" + androidId + "&vers=" + versionCode, "");
+//		get = new MasterGet(this, "http://nullgeodesic.com/seahhh/v1?dev=" + androidId + "&vers=" + versionCode, "");
+		get = new MasterGet(this, "http://192.168.1.190:8080/seahhh/v1?dev=" + androidId + "&vers=" + versionCode, "");
 		new Thread(get).start();
 	}
 
