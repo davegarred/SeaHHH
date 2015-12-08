@@ -4,20 +4,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.ObjectInputStream;
 import java.io.Serializable;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
-import org.garred.seah3.model.communicable.CommunicablePacket;
-import org.garred.seah3.model.communicable.Events1;
-import org.garred.seah3.model.communicable.Messages1;
 import org.garred.seah3.model.v2.CalendarDto;
-import org.garred.seah3.threads.MasterGet;
 import org.garred.seah3.threads.ThreadCallback;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -33,13 +26,11 @@ public class CommunicationsService implements ThreadCallback {
 	public static final int FAILED_DOWNLOAD = 1001;
 
 	private final Callback controllerCallback;
-//	private final ObjectMapper objectMapper;
 
 	public CalendarDto receivedDto;
 
 	public CommunicationsService(Callback callController) {
 		this.controllerCallback = callController;
-//		objectMapper = new ObjectMapper();
 	}
 
 	public void downloadEventList(String androidId, int versionCode) {
@@ -74,7 +65,6 @@ public class CommunicationsService implements ThreadCallback {
 					InputStream in = connection.getInputStream();
 					BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 					StringBuilder builder = new StringBuilder();
-//					receivedDto = objectMapper.readValue(in, CalendarDto.class);
 					String val;
 					while((val = reader.readLine()) != null) {
 						builder.append(val);
