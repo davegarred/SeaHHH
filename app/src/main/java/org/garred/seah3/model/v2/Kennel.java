@@ -47,4 +47,12 @@ public enum Kennel {
 		return this.hasHare;
 	}
 
+	public static Kennel fromCode(String code) {
+		for(Kennel kennel : Kennel.values()) {
+			if(kennel.name().equals(code)) {
+				return kennel;
+			}
+		}
+		return OTHER;
+	}
 }

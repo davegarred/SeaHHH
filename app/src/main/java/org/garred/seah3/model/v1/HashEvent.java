@@ -2,6 +2,9 @@ package org.garred.seah3.model.v1;
 
 import java.io.Serializable;
 import java.net.URL;
+
+import org.garred.seah3.model.v2.HashEventDto;
+import org.garred.seah3.model.v2.Kennel;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeFieldType;
 import org.joda.time.LocalTime;
@@ -13,74 +16,25 @@ public class HashEvent implements Comparable<Object>,Serializable {
 	private final String id; 
 	private final DateTime date;
 	private final LocalTime time;
-	private final Type type;
+	private final Kennel type;
 	private final int eventNumber;
 	private final String hare;
 	private final String eventName;
 	private final String description;
 	private final String address;
 	private final URL mapLink;
-	private final boolean locked;
-	
-	public enum Type {
-		SEATTLE("Seattle H3",1,"SH3",true),
-		TACOMA("Tacoma H3",2,"TH3",true),
-		HAPPY_HOUR("Hashy Hour",3,"Seattle H3 Hashy Hour",false),
-		SOUTH_SOUND("South Sound",4,"SSH3",true),
-		PUGET_SOUND("Puget Sound",5,"PSH3",true),
-		NO_BALLS("No Balls H3",6,"NBH3",true),
-		RAIN_CITY("Rain City H3",7,"RCH3",true),
-		HSWTF("Holy Shit WTF H3",8,"HSWTF",true),
-		BASH("Bike Hash",9,"SH2B",true),
-		RENTON_HAPPY_HOUR("Renton Happy Hour",10,"Thursday Renton Happy Hour",false),
-		FULL_MOON("Full Moon",11,"FMH3",true),
-		OTHER("",0,"",false);
-		
-		public static Type findType(int code) {
-			for(Type type : Type.class.getEnumConstants()) {
-				if(type.code == code) return type;
-			}
-			return Type.OTHER;
-		}
-		private final String name;
-		private final int code;
-		private final String identifier;
-		private final boolean hasHare;
-		
-		private Type(String name,int code,String identifier, boolean hasHare) {
-			this.name = name;
-			this.code = code;
-			this.identifier = identifier;
-			this.hasHare = hasHare;
-		}
-		public String getName() {
-			return name;
-		}
-		public int getCode() {
-			return code;
-		}
-		public String getIdentifier() {
-			return identifier;
-		}
-		public boolean hasHare() {
-			return hasHare;
-		}
 
-	}
-
-		
 	public HashEvent(Builder builder) {
 		this.id = builder.id;
 		this.date = builder.date;
 		this.time = builder.time;
 		this.type = builder.type;
 		this.eventNumber = builder.eventNumber;
-		this.hare = builder.hare;
+		this.hare = builder.hare == null ? "" : builder.hare;
 		this.eventName = builder.eventName;
-		this.description = builder.description;
+		this.description = builder.description == null ? "" : builder.description;
 		this.address = builder.address;
 		this.mapLink = builder.mapLink;
-		this.locked = builder.locked;
 	}
 
 	public String getFormattedLine() {
@@ -194,7 +148,7 @@ public class HashEvent implements Comparable<Object>,Serializable {
 		return false;
 	}
 	
-	public Type getType() {
+	public Kennel getType() {
 		return type;
 	}
 
@@ -252,10 +206,6 @@ public class HashEvent implements Comparable<Object>,Serializable {
 		return builder;
 	}
 
-	public boolean isLocked() {
-		return locked;
-	}
-	
 	public boolean hasDetails() {
 		return !description.isEmpty() || mapLink != null;
 	}
@@ -264,29 +214,20 @@ public class HashEvent implements Comparable<Object>,Serializable {
 		private String id = null;
 		private DateTime date = null;
 		private LocalTime time = null;
-		private Type type = Type.OTHER;
+		private Kennel type = Kennel.OTHER;
 		private int eventNumber = 0;
 		private String hare = "";
 		private String eventName = "";
 		private String description = "";
 		private String address = "";
 		private URL mapLink = null;
-		private boolean locked = false;
-		
+
 		public HashEvent build() {
 			return new HashEvent(this);
 		}
 		
-		public String getId() {
-			return id;
-		}
-
 		public void setId(String i) {
 			this.id = i;
-		}
-
-		public DateTime getDate() {
-			return date;
 		}
 		public void setDate(DateTime datetime) {
 			this.time = datetime.toLocalTime();
@@ -298,56 +239,48 @@ public class HashEvent implements Comparable<Object>,Serializable {
 		public void setTime(LocalTime time) {
 			this.time = time;
 		}
-		public Type getType() {
-			return type;
-		}
-		public void setType(Type type) {
+		public void setType(Kennel type) {
 			this.type = type;
-		}
-		public int getEventNumber() {
-			return eventNumber;
 		}
 		public void setEventNumber(int eventNumber) {
 			this.eventNumber = eventNumber;
 		}
-		public String getHare() {
-			return hare;
-		}
 		public void setHare(String hare) {
 			this.hare = hare;
-		}
-		public String getEventName() {
-			return eventName;
 		}
 		public void setEventName(String eventName) {
 			this.eventName = eventName;
 		}
-		public String getDescription() {
-			return description;
-		}
 		public void setDescription(String description) {
 			this.description = description;
 		}
-		public String getAddress() {
-			return address;
-		}
 		public void setAddress(String address) {
 			this.address = address;
-		}
-		public URL getMapLink() {
-			return mapLink;
 		}
 		public void setMapLinkBuild(URL mapLink) {
 			this.mapLink = mapLink;
 		}
 
-		public boolean isLocked() {
-			return locked;
-		}
 
-		public void setLocked(boolean locked) {
-			this.locked = locked;
-		}
+	}
 
+	public static HashEvent fromDto(HashEventDto dto) {
+		Builder builder = new Builder();
+		builder.setId(dto.id);
+		DateTime date = null;
+		if(dto.date.length == 0) {
+			date = new DateTime(dto.date[0],dto.date[1],dto.date[2],0,0);
+		} else {
+			date = new DateTime(dto.date[0],dto.date[1], dto.date[2], dto.date[3], dto.date[4]);
+		}
+		builder.setDate(new DateTime(date));
+		builder.setType(Kennel.fromCode(dto.kennel));
+		builder.setEventName(dto.eventName);
+		builder.setEventNumber(dto.eventNumber);
+		builder.setHare(dto.hare);
+		builder.setDescription(dto.description);
+		builder.setAddress(dto.address);
+		builder.setMapLinkBuild(dto.mapLink);
+		return builder.build();
 	}
 }

@@ -9,6 +9,13 @@
         <dex dex="/home/davegarred/AndroidStudioProjects/SeaH3/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0-afcdb8c690ce8e5446db75bb1aa7a302cc758291.jar" />
     </item>
     <item
+        jar="/home/davegarred/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a60a5e993c98c864010053cb901b7eab25306568/gson-2.2.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="/home/davegarred/AndroidStudioProjects/SeaH3/app/build/intermediates/pre-dexed/debug/gson-2.2.4-aef2acc5dde8901172f4bcdb3b23bfe1a71f6ac9.jar" />
+    </item>
+    <item
         jar="/home/davegarred/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.3/56498efd17752898cfcc3868c1b6211a07b12b8f/joda-time-2.3.jar"
         jumboMode="false"
         revision="21.1.2"

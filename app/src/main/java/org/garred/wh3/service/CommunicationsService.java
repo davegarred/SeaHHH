@@ -3,6 +3,7 @@ package org.garred.wh3.service;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.Serializable;
 import java.net.MalformedURLException;
@@ -15,6 +16,8 @@ import org.garred.seah3.model.communicable.Messages1;
 import org.garred.seah3.model.v2.CalendarDto;
 import org.garred.seah3.threads.MasterGet;
 import org.garred.seah3.threads.ThreadCallback;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,8 +25,7 @@ import android.os.Looper;
 import android.os.Handler.Callback;
 import android.os.Message;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
+import com.google.gson.Gson;
 
 public class CommunicationsService implements ThreadCallback {
 
@@ -31,13 +33,13 @@ public class CommunicationsService implements ThreadCallback {
 	public static final int FAILED_DOWNLOAD = 1001;
 
 	private final Callback controllerCallback;
-	private final ObjectMapper objectMapper;
+//	private final ObjectMapper objectMapper;
 
 	public CalendarDto receivedDto;
 
 	public CommunicationsService(Callback callController) {
 		this.controllerCallback = callController;
-		objectMapper = new ObjectMapper();
+//		objectMapper = new ObjectMapper();
 	}
 
 	public void downloadEventList(String androidId, int versionCode) {
@@ -70,8 +72,16 @@ public class CommunicationsService implements ThreadCallback {
 					URL url = new URL(target);
 					URLConnection connection = url.openConnection();
 					InputStream in = connection.getInputStream();
-					receivedDto = objectMapper.readValue(in, CalendarDto.class);
+					BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+					StringBuilder builder = new StringBuilder();
+//					receivedDto = objectMapper.readValue(in, CalendarDto.class);
+					String val;
+					while((val = reader.readLine()) != null) {
+						builder.append(val);
+					}
 					in.close();
+					Gson gson = new Gson();
+					receivedDto = gson.fromJson(builder.toString(), CalendarDto.class);
 					threadCallback.update(COMPLETED_DOWNLOAD);
 				} catch (MalformedURLException e) {
 					e.printStackTrace();
