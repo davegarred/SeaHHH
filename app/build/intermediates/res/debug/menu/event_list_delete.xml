@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="delete me"/>
+
+</menu>
+<!-- From: file:/home/davegarred/AndroidStudioProjects/SeaH3/app/src/main/res/menu/event_list_delete.xml -->

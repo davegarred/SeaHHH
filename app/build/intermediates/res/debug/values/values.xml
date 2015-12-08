@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/home/davegarred/AndroidStudioProjects/SeaH3/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="black_overlay">#66000000</color>
+    <declare-styleable name="ButtonBarContainerTheme"><attr format="reference" name="buttonBarStyle"/><attr format="reference" name="buttonBarButtonStyle"/></declare-styleable>
+    <!-- From: file:/home/davegarred/AndroidStudioProjects/SeaH3/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">4dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- From: file:/home/davegarred/AndroidStudioProjects/SeaH3/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="action_email_us">Email us</string>
+    <string name="action_help">Questions?</string>
+    <string name="app_name">Washington HHH</string>
+    <string name="email_us_chooser_message">Send me an email:</string>
+    <string name="email_us_subject_line">this app sucks</string>
+    <string name="help_text">Click on an event to see details\n\nThis is not a difficult concept.\n\nYou should not need help with this.\n\nEmail me with questions/comments/complaints/tit pics.</string>
+    <string name="popup_dialog_close_text">Cool story bro</string>
+    <!-- From: file:/home/davegarred/AndroidStudioProjects/SeaH3/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="ButtonBar">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style>
+    <style name="ButtonBarButton"/>
+    <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="buttonBarStyle">@style/ButtonBar</item>
+        <item name="buttonBarButtonStyle">@style/ButtonBarButton</item>
+    </style>
+</resources>
