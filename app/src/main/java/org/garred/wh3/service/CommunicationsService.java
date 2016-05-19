@@ -34,8 +34,6 @@ public class CommunicationsService implements ThreadCallback {
 	}
 
 	public void downloadEventList(String androidId, int versionCode) {
-//		get = new MasterGet(this, "http://nullgeodesic.com/seahhh/v1?dev=" + androidId + "&vers=" + versionCode, "");
-//		get = new MasterGet(this, "http://192.168.1.190:8080/seahhh/v1?dev=" + androidId + "&vers=" + versionCode, "");
 		Runnable runnable = getV2(this, androidId, versionCode);
 		new Thread(runnable).start();
 	}
@@ -55,6 +53,7 @@ public class CommunicationsService implements ThreadCallback {
 	}
 	
 	public Runnable getV2(final CommunicationsService threadCallback, String androidId, int versionCode) {
+//		final String target = "http://10.9.6.12:8080/seahhh/v2?dev=" + androidId + "&vers=" + versionCode;
 		final String target = "http://nullgeodesic.com/seahhh/v2?dev=" + androidId + "&vers=" + versionCode;
 		return new Runnable() {
 			@Override
