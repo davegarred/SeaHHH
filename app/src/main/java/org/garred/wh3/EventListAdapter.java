@@ -2,8 +2,8 @@ package org.garred.wh3;
 
 import java.util.List;
 
-import org.garred.seah3.model.HashEvent;
-import org.garred.seah3.model.v2.Kennel;
+import org.garred.wh3.model.HashEvent;
+import org.garred.wh3.model.v2.Kennel;
 
 import android.content.Context;
 import android.graphics.Color;

@@ -1,2 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/home/dgarred/apps/android-studio/gradle/m2repository/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="/home/dgarred/git/SeaHHH/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.2.4_44940f8eb9f78cce4a444b6bb788aedf69f46c98/classes.dex" />
+    </item>
+    <item
+        jar="/home/dgarred/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.3/56498efd17752898cfcc3868c1b6211a07b12b8f/joda-time-2.3.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="56498efd17752898cfcc3868c1b6211a07b12b8f">
+        <dex dex="/home/dgarred/git/SeaHHH/app/build/intermediates/transforms/dex/debug/folders/1000/10/joda-time-2.3_ffb3b57174cbd0212f5e24cfe7545c93b5a8363e/classes.dex" />
+    </item>
+    <item
+        jar="/home/dgarred/git/SeaHHH/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="2a1c58889f9303137a634e03aca0ecd619bf0c6f">
+        <dex dex="/home/dgarred/git/SeaHHH/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c597c794586a65bdca0715f79c2159fe9ee9c302/classes.dex" />
+    </item>
+    <item
+        jar="/home/dgarred/apps/android/android-sdk-linux/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="/home/dgarred/git/SeaHHH/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-19.1.0_8259eac0c664db1ea9ccc14893080f361ce3d6fe/classes.dex" />
+    </item>
+    <item
+        jar="/home/dgarred/git/SeaHHH/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="3a91a660055b116cfc1f97eae0fa18980896d510">
+        <dex dex="/home/dgarred/git/SeaHHH/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_1bdffbddfa2b82e2e920e0d6f807cbd5d32b9c3a/classes.dex" />
+    </item>
+
+</items>

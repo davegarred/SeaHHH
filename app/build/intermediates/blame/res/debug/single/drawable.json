@@ -8,12 +8,12 @@
         "source": "/home/dgarred/git/SeaHHH/app/src/main/res/drawable/happy3.png"
     },
     {
-        "merged": "/home/dgarred/git/SeaHHH/app/build/intermediates/res/merged/debug/drawable/bunny.png",
-        "source": "/home/dgarred/git/SeaHHH/app/src/main/res/drawable/bunny.png"
-    },
-    {
         "merged": "/home/dgarred/git/SeaHHH/app/build/intermediates/res/merged/debug/drawable/puget.png",
         "source": "/home/dgarred/git/SeaHHH/app/src/main/res/drawable/puget.png"
+    },
+    {
+        "merged": "/home/dgarred/git/SeaHHH/app/build/intermediates/res/merged/debug/drawable/bunny.png",
+        "source": "/home/dgarred/git/SeaHHH/app/src/main/res/drawable/bunny.png"
     },
     {
         "merged": "/home/dgarred/git/SeaHHH/app/build/intermediates/res/merged/debug/drawable/brunch.png",

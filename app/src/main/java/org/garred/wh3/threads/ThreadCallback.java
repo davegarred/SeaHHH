@@ -1,4 +1,4 @@
-package org.garred.seah3.threads;
+package org.garred.wh3.threads;
 
 public interface ThreadCallback {
 	

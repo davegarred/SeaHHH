@@ -1,10 +1,10 @@
-package org.garred.seah3.model;
+package org.garred.wh3.model;
 
 import java.io.Serializable;
 import java.net.URL;
 
-import org.garred.seah3.model.v2.HashEventDto;
-import org.garred.seah3.model.v2.Kennel;
+import org.garred.wh3.model.v2.HashEventDto;
+import org.garred.wh3.model.v2.Kennel;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeFieldType;
 import org.joda.time.LocalTime;

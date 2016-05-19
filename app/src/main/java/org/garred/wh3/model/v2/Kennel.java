@@ -1,4 +1,4 @@
-package org.garred.seah3.model.v2;
+package org.garred.wh3.model.v2;
 
 
 public enum Kennel {

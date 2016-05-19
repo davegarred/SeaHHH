@@ -9,8 +9,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
-import org.garred.seah3.model.v2.CalendarDto;
-import org.garred.seah3.threads.ThreadCallback;
+import org.garred.wh3.model.v2.CalendarDto;
+import org.garred.wh3.threads.ThreadCallback;
 
 import android.os.Bundle;
 import android.os.Handler;

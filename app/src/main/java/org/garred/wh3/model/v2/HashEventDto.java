@@ -1,8 +1,4 @@
-package org.garred.seah3.model.v2;
-
-import org.joda.time.DateTime;
-import org.joda.time.DateTimeFieldType;
-import org.joda.time.LocalTime;
+package org.garred.wh3.model.v2;
 
 import java.net.URL;
 
