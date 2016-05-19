@@ -1,2 +1,0 @@
-CHANGED,/home/dgarred/git/SeaHHH/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
-CHANGED,/home/dgarred/git/SeaHHH/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/org/garred/wh3/service/CommunicationsService$override.class

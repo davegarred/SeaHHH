@@ -1,4 +1,4 @@
-package org.garred.seah3.model.v1;
+package org.garred.seah3.model;
 
 import java.io.Serializable;
 import java.net.URL;
@@ -37,7 +37,7 @@ public class HashEvent implements Comparable<Object>,Serializable {
 		this.mapLink = builder.mapLink;
 	}
 
-	public String getFormattedLine() {
+	private String getFormattedLine() {
 		StringBuilder builder = new StringBuilder();
 		builder.append(this.getDay() + "\t");
 		builder.append(this.getTime().toString("h:mm a") + " CST\t");
@@ -109,55 +109,28 @@ public class HashEvent implements Comparable<Object>,Serializable {
 		}
 		return -1;		
 	}
-	
-	public DateTime getDate() {
-		return date;
-	}
- 	public int getDay() {
+
+	private int getDay() {
 		return date.get(DateTimeFieldType.dayOfMonth());
 	}
- 	public int getMonth() {
- 		return date.get(DateTimeFieldType.monthOfYear());
- 	}
- 	
- 	public String getDateString() {
- 		return date.toString("MMMM d, yyyy"); 	//String.format("%1$tB %1$te, %1$tY", date);
- 	}
- 	public String getDateTimeString() {
- 		return date.toString("yyyy-MM-dd HH:mm");
- 	}
- 	public String getDateStringShort() {
+	public String getDateStringShort() {
  		return date.toString("E\nMMM d"); 		//String.format("%1$ta\n%1$tb %1$te", date);
  	}
-	public String getDayOfWeek() {
- 		return date.toString("E"); 				//String.format("%1$ta", date);
-	} 
-	public String getDayAndDate() {
- 		return date.toString("EEEE, MMMM d"); 	//String.format("%1$tA, %1$tB %1$te", date);
-	} 
 
 	public String getId() {
 		return id;
 	}
 
-	public LocalTime getTime() {
+	private LocalTime getTime() {
 		return time;
 	}
-	public boolean hasTime() {
-		if(time.getMillisOfDay() > 0 && time.getHourOfDay() <= 24) return true;
-		return false;
-	}
-	
+
 	public Kennel getType() {
 		return type;
 	}
 
 	public int getEventNumber() {
 		return eventNumber;
-	}
-	public boolean hasEventNumber() {
-		if(eventNumber > 0) return true;
-		return false;
 	}
 
 	public String getHare() {
@@ -182,16 +155,6 @@ public class HashEvent implements Comparable<Object>,Serializable {
 		return mapLink.toExternalForm();
 	}
 	
-	public boolean beforeDate(DateTime date) {
-		if(this.date.isBefore(date)) return true;
-		return false;
-	}
-
-	public boolean afterDate(DateTime date) {
-		if(this.date.isAfter(date)) return true;
-		return false;
-	}
-
 	public String getTitle() {
 		StringBuilder builder = new StringBuilder();
 		builder.append(this.getType().getName());
