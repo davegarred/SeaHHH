@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "/home/dgarred/git/SeaHHH/app/build/intermediates/res/merged/debug/layout/event_list_item_kennel_hare.xml",
+        "source": "/home/dgarred/git/SeaHHH/app/src/main/res/layout/event_list_item_kennel_hare.xml"
+    },
+    {
+        "merged": "/home/dgarred/git/SeaHHH/app/build/intermediates/res/merged/debug/layout/event_list_item_hare.xml",
+        "source": "/home/dgarred/git/SeaHHH/app/src/main/res/layout/event_list_item_hare.xml"
+    },
+    {
+        "merged": "/home/dgarred/git/SeaHHH/app/build/intermediates/res/merged/debug/layout/event_list_item_kennel.xml",
+        "source": "/home/dgarred/git/SeaHHH/app/src/main/res/layout/event_list_item_kennel.xml"
+    },
+    {
+        "merged": "/home/dgarred/git/SeaHHH/app/build/intermediates/res/merged/debug/layout/activity_event_list.xml",
+        "source": "/home/dgarred/git/SeaHHH/app/src/main/res/layout/activity_event_list.xml"
+    },
+    {
+        "merged": "/home/dgarred/git/SeaHHH/app/build/intermediates/res/merged/debug/layout/splash.xml",
+        "source": "/home/dgarred/git/SeaHHH/app/src/main/res/layout/splash.xml"
+    },
+    {
+        "merged": "/home/dgarred/git/SeaHHH/app/build/intermediates/res/merged/debug/layout/event_list_item.xml",
+        "source": "/home/dgarred/git/SeaHHH/app/src/main/res/layout/event_list_item.xml"
+    },
+    {
+        "merged": "/home/dgarred/git/SeaHHH/app/build/intermediates/res/merged/debug/layout/event_details.xml",
+        "source": "/home/dgarred/git/SeaHHH/app/src/main/res/layout/event_details.xml"
+    }
+]

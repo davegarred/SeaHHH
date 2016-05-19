@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/dgarred/git/SeaHHH/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_action_help.png",
+        "source": "/home/dgarred/git/SeaHHH/app/src/main/res/drawable-hdpi/ic_action_help.png"
+    },
+    {
+        "merged": "/home/dgarred/git/SeaHHH/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
+        "source": "/home/dgarred/git/SeaHHH/app/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/dgarred/git/SeaHHH/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_content_new_email.png",
+        "source": "/home/dgarred/git/SeaHHH/app/src/main/res/drawable-hdpi/ic_content_new_email.png"
+    }
+]

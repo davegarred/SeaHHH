@@ -1,6 +1,6 @@
 package org.garred.wh3;
 
-import org.garred.seah3.model.v1.HashEvent;
+import org.garred.wh3.model.HashEvent;
 
 import android.os.Bundle;
 import android.app.AlertDialog;
@@ -14,7 +14,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class EventListActivity extends ListActivity {
 

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/dgarred/git/SeaHHH/app/build/intermediates/res/merged/debug/menu/event_list_delete.xml",
+        "source": "/home/dgarred/git/SeaHHH/app/src/main/res/menu/event_list_delete.xml"
+    },
+    {
+        "merged": "/home/dgarred/git/SeaHHH/app/build/intermediates/res/merged/debug/menu/menu_activity_actions.xml",
+        "source": "/home/dgarred/git/SeaHHH/app/src/main/res/menu/menu_activity_actions.xml"
+    }
+]

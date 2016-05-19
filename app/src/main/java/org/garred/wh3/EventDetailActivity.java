@@ -1,12 +1,11 @@
 package org.garred.wh3;
 
-import org.garred.seah3.model.v1.HashEvent;
+import org.garred.wh3.model.HashEvent;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -17,7 +16,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class EventDetailActivity extends Activity {

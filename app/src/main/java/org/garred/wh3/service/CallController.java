@@ -3,8 +3,8 @@ package org.garred.wh3.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.garred.seah3.model.v1.HashEvent;
-import org.garred.seah3.model.v2.HashEventDto;
+import org.garred.wh3.model.HashEvent;
+import org.garred.wh3.model.v2.HashEventDto;
 import org.garred.wh3.ContentHolder;
 import org.garred.wh3.EventListActivity;
 
