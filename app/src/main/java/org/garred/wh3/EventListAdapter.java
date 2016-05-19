@@ -3,6 +3,7 @@ package org.garred.wh3;
 import java.util.List;
 
 import org.garred.seah3.model.v1.HashEvent;
+import org.garred.seah3.model.v2.Kennel;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -27,7 +28,7 @@ public class EventListAdapter extends ArrayAdapter<HashEvent> {
 		LayoutInflater inflater = (LayoutInflater)context.getSystemService (Context.LAYOUT_INFLATER_SERVICE);
 		// TODO need an enum instead of these if-else
 		View view = null;
-		if(event.getType() != HashEvent.Type.OTHER) {
+		if(event.getType() != Kennel.OTHER) {
 			if(!event.getHare().isEmpty()) {
 				view = inflater.inflate(R.layout.event_list_item_kennel_hare, parent, false);
 			} else {

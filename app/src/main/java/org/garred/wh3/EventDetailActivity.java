@@ -146,6 +146,9 @@ public class EventDetailActivity extends Activity {
 			case RAIN_CITY:
 				icon = R.drawable.raincity;
 				break;
+			case SEAMON:
+				icon = R.drawable.seamon;
+				break;
 			case FULL_MOON:
 			case OTHER:
 		}

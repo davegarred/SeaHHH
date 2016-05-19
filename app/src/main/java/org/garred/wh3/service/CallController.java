@@ -1,8 +1,10 @@
 package org.garred.wh3.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.garred.seah3.model.v1.HashEvent;
+import org.garred.seah3.model.v2.HashEventDto;
 import org.garred.wh3.ContentHolder;
 import org.garred.wh3.EventListActivity;
 
@@ -33,8 +35,11 @@ public class CallController implements Callback {
 	@Override
 	public boolean handleMessage(Message msg) {
 		if(activity != null) {
-			@SuppressWarnings("unchecked")
-			List<HashEvent> events = (List<HashEvent>) msg.getData().getSerializable("events");
+			List<HashEvent> events = new ArrayList<HashEvent>();
+			for(HashEventDto dto : (List<HashEventDto>) msg.getData().getSerializable("events")) {
+				events.add(HashEvent.fromDto(dto));
+			}
+
 			ContentHolder.setItems(events);
 			String message = msg.getData().getString("message");
 			if(message != null && !message.isEmpty()) ContentHolder.setMessage(message);

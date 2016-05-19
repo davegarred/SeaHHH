@@ -39,11 +39,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int nbh3=0x7f02000a;
         public static final int puget=0x7f02000b;
         public static final int raincity=0x7f02000c;
-        public static final int seattle=0x7f02000d;
-        public static final int south_sound=0x7f02000e;
-        public static final int splash=0x7f02000f;
-        public static final int splash2=0x7f020010;
-        public static final int tacoma=0x7f020011;
+        public static final int seamon=0x7f02000d;
+        public static final int seattle=0x7f02000e;
+        public static final int south_sound=0x7f02000f;
+        public static final int splash=0x7f020010;
+        public static final int splash2=0x7f020011;
+        public static final int tacoma=0x7f020012;
     }
     public static final class id {
         public static final int action_email_us=0x7f090011;
